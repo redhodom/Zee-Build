@@ -90,7 +90,7 @@ import furious from './assets/cabinet/furious.jpeg'
 import nova330 from './assets/cabinet/nova330.jpeg'
 import primuim from './assets/cabinet/primuim.jpeg'
 import sahara from './assets/cabinet/sahara.jpeg'
-import zebronicsPantom from './assets/cabinet/zebronics-Pantom.jpeg'
+import zebronicsPantom from './assets/cabinet/zebronics-pantom.jpeg'
 
 import mt1 from './assets/monitors/mt1.jpg'
 import mt2 from './assets/monitors/mt2.jpg'
