@@ -1,0 +1,293 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #250f27, #302043, #64572c);
+  min-height: 100vh;
+  color: #fff;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.paymentBox {
+  display: flex;
+  gap: 24px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 24px;
+  border-radius: 16px;
+  width: 88%;
+  max-width: 980px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Left column: methods */
+.methods {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 220px;
+}
+
+.methods h3 {
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+  border-bottom: 2px solid rgba(255, 208, 0, 0.15);
+  padding-bottom: 6px;
+}
+
+/* Each option is a horizontal row: radio + label text */
+.methodItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.18s, transform 0.12s;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Slight hover effect */
+.methodItem:hover {
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-1px);
+}
+
+/* Make the radio input visually consistent */
+.methodItem input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #bf00ff; /* modern browsers */
+}
+
+/* text next to radio */
+.methodText {
+  font-size: 0.98rem;
+}
+
+/* Right column: form */
+.form {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* labels and inputs */
+.fieldLabel {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgb(255, 255, 255);
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+/* pay button */
+.payBtn {
+  margin-top: 8px;
+  background: linear-gradient(90deg, #b700ff, #d400d4);
+  border: none;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  font-weight: 700;
+  color: #042;
+  align-self: flex-start;
+  box-shadow: 0 8px 18px rgba(0, 188, 212, 0.18);
+}
+
+.payBtn:active {
+  transform: translateY(1px);
+}
+
+/* row for expiry/cvv */
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Fix for select dropdown visibility */
+select.input {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  appearance: none; /* removes default arrow styling */
+}
+
+/* Style the dropdown arrow (optional aesthetic fix) */
+select.input::-ms-expand {
+  display: none; /* hide arrow in IE */
+}
+
+/* When dropdown opens, ensure readable background and text */
+select.input option {
+  background-color: #1a1a1a; /* dark background */
+  color: #fff;               /* visible text */
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .paymentBox {
+    flex-direction: column;
+    width: 95%;
+    padding: 18px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .methods {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .methodItem {
+    flex: 1 1 48%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .methods {
+    min-width: 0;
+  }
+
+  .methodItem {
+    gap: 8px;
+    padding: 8px;
+    font-size: 0.92rem;
+  }
+
+  .payBtn {
+    width: 100%;
+    align-self: stretch;
+  }
+}
+
+/* existing styles stay the same … add these at the end */
+
+/* ---------- Footer ---------- */
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+}
+
+.footerContent {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footerLinks {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.footerLinks a {
+  color: #00e0ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footerLinks a:hover {
+  color: #00bcd4;
+}
+
+/* responsive tweak */
+@media (max-width: 600px) {
+  .footerLinks {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+.buttonRow {
+  display: flex;
+  gap: 1rem;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.payBtn {
+  background-color: #00bcd4;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.payBtn:hover {
+  background-color: #0097a7;
+}
+
+.cancelBtn {
+ margin-top: 8px;
+  background: linear-gradient(90deg, #ff0400, #d43500);
+  border: none;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  align-self: flex-start;
+  box-shadow: 0 8px 18px rgba(0, 188, 212, 0.18);
+}
+
+.cancelBtn:hover {
+  background-color: #d32f2f;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #bbb;
+}

@@ -1,0 +1,248 @@
+.aboutContainer {
+  background: radial-gradient(circle at top left, #1f0f2a, #170216);
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🦾 Hero Section */
+.heroSection {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffff00;
+  text-shadow: 0 0 15px #a600ff;
+}
+
+.title span {
+  color: #f8d838;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 1rem auto;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* 🚀 Mission Section */
+.missionSection {
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(157, 0, 255, 0.15);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.missionSection h2 {
+ color: #fff200;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px #ff00fb;
+}
+
+.missionSection p {
+  font-size: 1.05rem;
+  color: #d9d1db;
+  line-height: 1.7;
+}
+
+/* 💡 Why Choose Us */
+.whyChoose {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.whyChoose h2 {
+  color: #fff200;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px #ff00fb;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.featureCard {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 1.5rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(204, 0, 255, 0.05);
+}
+
+.featureCard:hover {
+  box-shadow: 0 0 25px rgba(255, 225, 0, 0.3);
+  background: rgba(208, 0, 255, 0.08);
+}
+
+.featureCard h3 {
+  color: #f838d5;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.featureCard p {
+  color: #d1d5db;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* 🌐 CTA Section */
+.ctaSection {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.ctaSection h2 {
+  color: #a600ff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.ctaSection p {
+  color: #cbd5e1;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButton {
+  background: linear-gradient(90deg, #c300ff, #ff00d9);
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+}
+
+.ctaButton:hover {
+  background: linear-gradient(90deg, #d400ad, #8300bb);
+  box-shadow: 0 0 25px rgba(255, 225, 0, 0.5);
+  transform: scale(1.05);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .missionSection,
+  .whyChoose {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .aboutContainer {
+    padding: 1.2rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 0 0.5rem;
+  }
+
+  /* 🚀 Mission Section */
+  .missionSection {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .missionSection h2 {
+    font-size: 1.4rem;
+  }
+
+  .missionSection p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* 💡 Why Choose Zee Build */
+  .whyChoose {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .whyChoose h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr;          /* stack all cards */
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .featureCard {
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
+  }
+
+  .featureCard h3 {
+    font-size: 1.1rem;
+  }
+
+  .featureCard p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* 🌐 CTA Section */
+  .ctaSection {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+  }
+
+  .ctaSection h2 {
+    font-size: 1.4rem;
+  }
+
+  .ctaSection p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .ctaButton {
+    display: inline-block;
+    width: 100%;
+    max-width: 260px;
+    padding: 0.8rem 0;
+    font-size: 0.95rem;
+  }
+}
